@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import CheckIcon from "@mui/icons-material/Check";
 import { Button } from "@mui/material";
 import axios from "axios";
+import { API_URL } from "../utils";
 
 export const UpdateTaskForm = ({
   fetchTasks,
@@ -42,7 +43,8 @@ export const UpdateTaskForm = ({
         <Button
           variant="contained"
           onClick={async () => {
-            await handleUpdateTaskName(), setIsDialogOpen(false);
+            await handleUpdateTaskName();
+            setIsDialogOpen(false);
           }}
         >
           <CheckIcon />

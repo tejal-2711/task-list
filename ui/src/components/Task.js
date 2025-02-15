@@ -7,6 +7,7 @@ import classnames from "classnames";
 import { Button } from "@mui/material";
 import { Typography } from "@mui/material";
 import axios from "axios";
+import { API_URL } from "../utils";
 
 export const Task = ({ task, fetchTasks }) => {
   const { id, name, completed } = task;
